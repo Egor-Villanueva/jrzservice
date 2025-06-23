@@ -1,0 +1,188 @@
+
+<!-- Services Banner -->
+<section class="relative bg-cover bg-center h-64 mt-[64px]" style="background-image: url('/assets/images/contact-banner.jpeg');">
+  <div class="absolute inset-0 bg-black/70 flex items-center justify-center">
+    <h1 class="text-white text-4xl md:text-5xl font-extrabold drop-shadow-xl">Servicios</h1>
+  </div>
+</section>
+
+<h1 class="text-4xl text-center mt-20 font-bold text-yellow-500 mb-4 underline decoration-red-500">Nuestros <span>Servicios</span></h1>
+
+<!-- Services Gallery -->
+<section class="bg-white py-20 px-6 max-w-7xl mx-auto">
+  <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Servicio Item 1 -->
+    <div class="rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+      <img src="/assets/services/service1.jpeg" alt="Instalaciones Eléctricas" class="w-full h-56 object-cover">
+      <div class="p-6 bg-gray-50 text-center">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Servicio de Ingeniería de Diseño, Asesoría y Consultoría en IIEE</h3>
+        <button (click)="openModal('ingenieria')" class="cursor-pointer inline-block bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:text-white transition">Ver Detalle</button>
+      </div>
+    </div>
+
+    <!-- Modal Detalle Servicio 1 -->
+    @if (activeModal === 'ingenieria') {
+      <div class="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/60">
+        <div class="bg-white max-w-xl w-full rounded-xl p-6 relative shadow-2xl animate-fadeIn">
+          <button (click)="activeModal = null" class="cursor-pointer absolute top-3 right-3 bg-red-600 text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <!-- <img src="/assets/services/service1.jpeg" alt="Instalaciones Eléctricas" class="rounded-lg mb-4 w-full"> -->
+          <img src="/assets/services/service1.jpeg" alt="$2" class="rounded-lg mb-4 w-full h-64 object-cover">
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Servicio de Ingeniería de Diseño, Asesoría y Consultoría en IIEE</h2>
+          <!-- <p class="text-gray-700 mb-6 leading-relaxed text-justify">Brindamos instalaciones eléctricas domiciliarias e industriales con personal calificado, cumpliendo con los estándares de seguridad, eficiencia y calidad técnica. Nuestro compromiso es garantizar un servicio duradero y confiable.</p> -->
+          <ul class="list-disc list-inside text-gray-800 space-y-2">
+            <li>Elaboración de proyectos eléctricos residenciales, comerciales, industriales y otros.</li>
+            <li>Estudios de replanteo de instalaciones eléctricas existentes.</li>
+            <li>Estudio de calidad de energía con equipos homologados en OSINERGMIN.</li>
+            <li>Diseño de Iluminación Industrial y Alumbrado Exterior (Estudio de iluminación en II.EE. existentes)</li>
+            <li>Diseño de sistemas de puesta a tierra y protección contra-rayos.</li>
+            <li>Estudio de termografia y puntos calientes en tableros, celdas, subestaciones, etc.</li>
+          </ul>
+      </div>
+    </div>
+  }
+
+    <!-- Servicio Item 2 -->
+    <div class="rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+      <img src="/assets/services/service2.jpeg" alt="Gasfitería General" class="w-full h-56 object-cover">
+      <div class="p-6 bg-gray-50 text-center">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Ejecució de Proyectos Eléctricos</h3>
+        <!-- <a href="/services/gasfiteria" class="inline-block bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:text-white transition">Ver Detalle</a> -->
+        <button (click)="openModal('instalaciones')" class="cursor-pointer inline-block bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:text-white transition">Ver Detalle</button>
+      </div>
+    </div>
+
+  <!-- Modal Detalle Servicio 2 -->
+    @if (activeModal === 'instalaciones') {
+      <div class="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/60">
+        <div class="bg-white max-w-xl w-full rounded-xl p-6 relative shadow-2xl animate-fadeIn">
+          <button (click)="activeModal = null" class="cursor-pointer absolute top-3 right-3 bg-red-600 text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <!-- <img src="/assets/services/service2.jpeg" alt="Instalaciones Eléctricas" class="rounded-lg mb-4 w-full"> -->
+          <img src="/assets/services/service2.jpeg" alt="$2" class="rounded-lg mb-4 w-full h-64 object-cover">
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Ejecución de Proyectos Eléctricos</h2>
+          <ul class="list-disc list-inside text-gray-800 space-y-2">
+            <li>Ejecució de Proyectos Eléctricos.</li>
+            <li>Montaje de Subestaciones Eléctricas de 1KV A 60 KV.</li>
+            <li>Ejecución de Redes Eléctricas de Media y Baja Tensión.</li>
+            <li>Instalación de Sistemas de Emergencia (detectores, sistema contra incendios e iluminación).</li>
+            <li>Instalación de Sistemas de Cómputo y Cableado Estructurado.</li>
+            <li>Instalación de Sistemas de Puesta a Tierra y protección contra-rayos.</li>
+            <li>Automatización e instrumentación industrial (instrumentos de medición de campo, variadores y arrancadores, protocolos de comunicación y equipos de automatización.</li>
+          </ul>
+      </div>
+    </div>
+  }
+
+    <!-- Servicio Item 3 -->
+    <div class="rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+      <img src="/assets/services/service3.jpeg" alt="Mantenimiento Preventivo" class="w-full h-56 object-cover">
+      <div class="p-6 bg-gray-50 text-center">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Mantenimiento</h3>
+        <button (click)="openModal('mantenimiento')" class="cursor-pointer inline-block bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:text-white transition">Ver Detalle</button>
+      </div>
+    </div>
+
+    <!-- Modal Detalle Servicio 3 -->
+    @if (activeModal === 'mantenimiento') {
+      <div class="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/60">
+        <div class="bg-white max-w-xl w-full rounded-xl p-6 relative shadow-2xl animate-fadeIn">
+          <button (click)="activeModal = null" class="cursor-pointer absolute top-3 right-3 bg-red-600 text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <!-- <img src="/assets/services/service2.jpeg" alt="Instalaciones Eléctricas" class="rounded-lg mb-4 w-full"> -->
+          <img src="/assets/services/service3.jpeg" alt="$2" class="rounded-lg mb-4 w-full h-64 object-cover">
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Mantenimiento</h2>
+          <ul class="list-disc list-inside text-gray-800 space-y-2">
+            <li>Mantenimiento preventivo, predictivo y correctivo de redes eléctricas aéreas.</li>
+            <li>Mantenimiento preventivo, predictivo y correctivo de subestaciones eléctricas en media y alta tensión.</li>
+            <li>Mantenimiento preventivo, predictivo y correctivo de tableros eléctricos en general.</li>
+            <li>Mantenimiento preventivo, predictivo y correctivo de instalaciones eléctricas residenciales, industriales y de minería (Baja tensión, Media tensión y alta tensión).</li>
+            <li>Mantenimiento de sistemas de puesta a tierra y protección contra rayos.</li>
+          </ul>
+      </div>
+    </div>
+  }
+
+    <!-- Servicio Item 4 -->
+    <div class="rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+      <img src="/assets/services/service4.jpeg" alt="Pintura y Acabados" class="w-full h-56 object-cover">
+      <div class="p-6 bg-gray-50 text-center">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Fabricación y Suministros de Tableros Eléctricos</h3>
+        <button (click)="openModal('fabricacion')" class="cursor-pointer inline-block bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:text-white transition">Ver Detalle</button>
+      </div>
+    </div>
+
+    <!-- Modal Detalle Servicio 4 -->
+    @if (activeModal === 'fabricacion') {
+      <div class="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/60">
+        <div class="bg-white max-w-xl w-full rounded-xl p-6 relative shadow-2xl animate-fadeIn">
+          <button (click)="activeModal = null" class="cursor-pointer absolute top-3 right-3 bg-red-600 text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <!-- <img src="/assets/services/service2.jpeg" alt="Instalaciones Eléctricas" class="rounded-lg mb-4 w-full"> -->
+          <img src="/assets/services/service4.jpeg" alt="$2" class="rounded-lg mb-4 w-full h-64 object-cover">
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Mantenimiento</h2>
+          <ul class="list-disc list-inside text-gray-800 space-y-2">
+            <li>Tableros especiales según requerimiento del cliente.</li>
+            <li>Tableros Adosados.</li>
+            <li>Tableros Empotrados.</li>
+            <li>Tableros Auto soportados.</li>
+            <li>Tableros de distribución bajo normas NEMA e IEC.</li>
+            <li>Tableros de control y automatización.</li>
+            <li>Tablero de tomas eléctricas.</li>
+            <li>Integración de tableros de importados (rittal, tekpan, himel, etc).</li>
+            <li>Tableros de Transferencias automáticas.</li>
+            <li>Centro control de motores.</li>
+            <li>Caja de pase.</li>
+          </ul>
+      </div>
+    </div>
+  }
+
+    <!-- Servicio Item 5 -->
+    <div class="rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 hover:shadow-2xl transition duration-300">
+      <img src="/assets/services/service5.jpeg" alt="Reparaciones Generales" class="w-full h-56 object-cover">
+      <div class="p-6 bg-gray-50 text-center">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Control de Calidad</h3>
+        <button (click)="openModal('control')" class="cursor-pointer inline-block bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-red-600 hover:text-white transition">Ver Detalle</button>
+      </div>
+    </div>
+
+    <!-- Modal Detalle Servicio 5 -->
+    @if (activeModal === 'control') {
+      <div class="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/60">
+        <div class="bg-white max-w-xl w-full rounded-xl p-6 relative shadow-2xl animate-fadeIn">
+          <button (click)="activeModal = null" class="cursor-pointer absolute top-3 right-3 bg-red-600 text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <!-- <img src="/assets/services/service2.jpeg" alt="Instalaciones Eléctricas" class="rounded-lg mb-4 w-full"> -->
+          <img src="/assets/services/service5.jpeg" alt="$2" class="rounded-lg mb-4 w-full h-64 object-cover">
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Control de Calidad</h2>
+          <p class="text-gray-700 mb-6 leading-relaxed text-justify">Cada uno de nuestros tableros pasa por el proceso de control de calidad y protocolos de pruebas eléctricas y mecánicas.</p>
+          <ul class="list-disc list-inside text-gray-800 space-y-2">
+            <li>Ajuste de barras de distribución.</li>
+            <li>Ajuste de circuitos de fuerza y control.</li>
+            <li>Medición de espesor de pintura electrostática.</li>
+            <li>Continuidad de circuito auxiliares o control.</li>
+            <li>Continuidad de circuitos de medición, interruptores, conmutadores y fusibles.</li>
+            <li>Prueba de resistencia de aislamiento de cables y barras.</li>
+          </ul>
+      </div>
+    </div>
+  }
+
+  </div>
+</section>

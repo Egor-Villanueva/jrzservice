@@ -1,0 +1,73 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-4">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <div class="text-4xl font-bold text-yellow-500">
+      <a routerLink="/" class="cursor-pointer">
+        JRZ<span class="text-black">Service</span>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex space-x-4">
+      <a
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="flex text-lg font-semibold items-center  gap-2 px-4 py-2 bg-yellow-400 text-black rounded-full hover:bg-red-600 hover:text-white transition-all duration-300 shadow-md"
+      >
+        <!-- <svg class="w-7 h-7 text-black hover:text-white  drop-shadow" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6m2 10H3" />
+        </svg> -->
+        Inicio
+      </a>
+      <a
+        routerLink="/about"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="flex text-lg font-semibold items-center  gap-2 px-4 py-2 bg-yellow-400 text-black rounded-full hover:bg-red-600 hover:text-white transition-all duration-300 shadow-md">
+        <!-- <svg class="w-5 h-5 text-white drop-shadow" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6m2 10H3" />
+        </svg> -->
+        Nosotros
+      </a>
+      <a
+        routerLink="/services"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="flex text-lg font-semibold items-center  gap-2 px-4 py-2 bg-yellow-400 text-black rounded-full hover:bg-red-600 hover:text-white transition-all duration-300 shadow-md">
+        <!-- <svg class="w-5 h-5 text-white drop-shadow" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h7" />
+        </svg> -->
+        Servicios
+      </a>
+      <a
+        routerLink="/contact"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="flex text-lg font-semibold items-center  gap-2 px-4 py-2 bg-yellow-400 text-black rounded-full hover:bg-red-600 hover:text-white transition-all duration-300 shadow-md">
+        <!-- <svg class="w-5 h-5 text-white drop-shadow" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21 10H7m14 4H3m18-8H3m18 12H9" />
+        </svg> -->
+        Contacto
+      </a>
+    </nav>
+    <!-- Mobile menu toggle -->
+    <button (click)="showMenu = !showMenu" class="md:hidden text-yellow-500">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div *ngIf="showMenu" class="bg-black text-white px-6 pt-6 pb-4 md:hidden transition-all duration-300">
+    <a href="/" class="block py-2 hover:bg-yellow-400 hover:text-red-600 rounded px-4">Inicio</a>
+    <a href="/about" class="block py-2 hover:bg-yellow-400 hover:text-red-600 rounded px-4">Nosotros</a>
+    <a href="/services" class="block py-2 hover:bg-yellow-400 hover:text-red-600 rounded px-4">Servicios</a>
+    <a href="/contact" class="block py-2 hover:bg-yellow-400 hover:text-red-600 rounded px-4">Contacto</a>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
+    const menu = document.getElementById('mobileMenu');
+    menu?.classList.toggle('hidden');
+  });
+</script>
